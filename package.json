@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.31.8"
+    "eslint-plugin-react": "^7.31.8",
+    "gh-pages": "^4.0.0"
   }
 }

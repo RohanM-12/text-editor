@@ -47,6 +47,15 @@ export default function TextForm(props) {
     props.showAlert("Spaces removed","Success");
   }
 
+  const handleAlignLeft=() =>{
+  //  var temp = document.getElementById("mybox");
+
+  }
+
+
+  
+
+
   return (
     <>
 
@@ -55,19 +64,26 @@ export default function TextForm(props) {
         <div className="mb-3">
           <label htmlFor="mybox" className="form-label"></label>
           <textarea style={{backgroundColor:props.mode==='dark' ? 'grey':'white' ,color:props.mode==='dark' ? 'white':'black' } } className="form-control" id="mybox" onChange={handleOnChange} value={text} rows="8"></textarea>
-        </div>
+      </div>
 
-        {/* <div className="container-fluid"> */}
-        {/* <div className="row"> */}
-        <button className="btn btn-primary mx-2" onClick={hadleUpClick} >Convert to Upper-case</button>
+        <div className="container">
+        <button className="btn btn-primary mx-2" onClick={hadleUpClick} >  <span class="glyphicon glyphicon-align-right"></span> Convert to Upper-case</button>
         <button className="btn btn-primary  mx-2" onClick={handleDownClick}>Convert to Lower-case</button>
         <button className="btn btn-primary  mx-2" onClick={handleTitleClick}>Title Case</button>
         <button className="btn btn-primary  mx-2" onClick={handleClearClick}>Clear Text</button>
         <button className="btn btn-primary  mx-2" onClick={handleCopyClick}>Copy Text</button>
         <button className="btn btn-primary  mx-2" onClick={handleRmvSpcClick}>Remove Extra Spaces</button>
 
-        {/* </div> */}
-        {/* </div> */}
+      </div>
+       
+       {/* <div className="container my-5">
+      
+       <button className="btn btn-primary  mx-2" onClick={handleAlignLeft}><span class="glyphicon glyphicon-align-left"></span> Align Left</button>  
+       <button className="btn btn-primary  mx-2" onClick={handleRmvSpcClick}><span class="glyphicon glyphicon-align-right"></span> Align right</button>  
+       <button className="btn btn-primary  mx-2" onClick={handleRmvSpcClick}><span class=" 	glyphicon glyphicon-align-justify"></span> Align Justify</button>  
+       <button className="btn btn-primary  mx-2" onClick={handleRmvSpcClick}><span class="glyphicon glyphicon-align-center"></span> Align Center</button>  
+       </div> */}
+
       </div>
       <div className="container my-4" style={{color:props.mode==='dark' ? 'white':'black'}}>
         <h2>Your Text Summary</h2>
